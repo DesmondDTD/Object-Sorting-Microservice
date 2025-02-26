@@ -12,3 +12,9 @@
     "key": "price",
     "order": "desc"
   }
+
+## UML Sequence Diagram
+
+Below is the UML Sequence Diagram for the Object Sorting Microservice:
+
+![UML Sequence Diagram](uml_sequence_diagram.png)

@@ -12,9 +12,9 @@ This microservice allows you to sort a dataset based on a specified key in eithe
   - **key**: The key in the object by which the data will be sorted (e.g., "price").
   - **order**: The order in which you want to sort the data. Possible values: `"asc"` for ascending, `"desc"` for descending. Default is `"asc"`.
 
-### Example Request:
+### Example Request:  
 ```json
-{
+{ 
   "data": [
     {"stock": "AAPL", "price": "$145.32"},
     {"stock": "GOOGL", "price": "$2753.56"},
@@ -23,6 +23,8 @@ This microservice allows you to sort a dataset based on a specified key in eithe
   "key": "price",
   "order": "desc"
 }
+
+### How to Send a Request Programmatically
 
 import requests
 
@@ -41,6 +43,8 @@ payload = {
 response = requests.post(url, json=payload)
 print(response.json())
 
+### Example Response
+
 {
   "sorted_data": [
     {"stock": "GOOGL", "price": "$2753.56"},
@@ -49,6 +53,8 @@ print(response.json())
   ],
   "index": [1, 2, 3]
 }
+
+### How to Receive Data Programmatically
 
 import requests
 
@@ -73,4 +79,6 @@ if response.status_code == 200:
 else:
     print(f"Error: {response.json()}")
 
-![UML Sequence Diagram](uml_sequence_diagram.png) 
+### UML Sequence Diagram
+![UML Sequence Diagram](uml_sequence_diagram.png)
+

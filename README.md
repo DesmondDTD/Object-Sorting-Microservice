@@ -24,11 +24,6 @@ This microservice allows you to sort a dataset based on a specified key in eithe
   "order": "desc"
 }
 
-### How to Send a Request Programmatically:
-
-To send a POST request to the microservice, you can use libraries like `requests` in Python. Here is an example of how to send a request to sort the stock data by `price` in descending order:
-
-```python
 import requests
 
 url = "http://127.0.0.1:5000/sort"
@@ -46,8 +41,6 @@ payload = {
 response = requests.post(url, json=payload)
 print(response.json())
 
-### Example Response 
-
 {
   "sorted_data": [
     {"stock": "GOOGL", "price": "$2753.56"},
@@ -56,8 +49,6 @@ print(response.json())
   ],
   "index": [1, 2, 3]
 }
-
-### How to Receive Data Programmatically 
 
 import requests
 
@@ -82,5 +73,4 @@ if response.status_code == 200:
 else:
     print(f"Error: {response.json()}")
 
-
-![UML Sequence Diagram](uml_sequence_diagram.png)
+![UML Sequence Diagram](uml_sequence_diagram.png) 
